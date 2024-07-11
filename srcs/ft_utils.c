@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 14:29:36 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/10 16:57:07 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:11:49 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,10 @@ t_stack	*ft_find_max(t_stack **a)
 
 int	ft_find_min_position(t_stack *stack)
 {
-	int min;
-	int pos;
-	int min_pos;
-	t_stack *current;
+	int		min;
+	int		pos;
+	int		min_pos;
+	t_stack	*current;
 
 	min = stack->value;
 	pos = 0;

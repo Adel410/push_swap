@@ -6,23 +6,23 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:29:12 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/10 13:25:07 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/11 16:57:37 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ft_read_stack(t_stack **head)
-{
-	t_stack	*current;
+// void	ft_read_stack(t_stack **head)
+// {
+// 	t_stack	*current;
 
-	current = *head;
-	while (current)
-	{
-		ft_printf("%d\n", current->value);
-		current = current->next;
-	}
-}
+// 	current = *head;
+// 	while (current)
+// 	{
+// 		ft_printf("%d\n", current->value);
+// 		current = current->next;
+// 	}
+// }
 
 int	main(int argc, char *argv[])
 {
