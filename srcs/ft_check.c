@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 15:03:19 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/02 17:39:11 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/11 22:52:53 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ long	ft_atol(const char *str)
 	return (sign * result);
 }
 
-static int	is_valid_number(char **splitted, int current_index, char *args)
+static int	ft_is_valid_number(char **splitted, int current_index, char *args)
 {
 	char	*str;
 
@@ -61,7 +61,7 @@ static int	is_valid_number(char **splitted, int current_index, char *args)
 	return (1);
 }
 
-int	check_int_range(char **splitted, long num, char *args)
+int	ft_check_overflow(char **splitted, long num, char *args)
 {
 	if (num < INT_MIN || num > INT_MAX)
 	{
@@ -72,7 +72,7 @@ int	check_int_range(char **splitted, long num, char *args)
 	return (0);
 }
 
-static int	has_duplicates(char **splitted, int current_index, long num,
+static int	ft_has_duplicates(char **splitted, int current_index, long num,
 		char *args)
 {
 	int	j;
@@ -107,10 +107,10 @@ int	ft_check_args(char *args)
 	i = 0;
 	while (splitted[i])
 	{
-		is_valid_number(splitted, i, args);
+		ft_is_valid_number(splitted, i, args);
 		num = ft_atol(splitted[i]);
-		check_int_range(splitted, num, args);
-		has_duplicates(splitted, i, num, args);
+		ft_check_overflow(splitted, num, args);
+		ft_has_duplicates(splitted, i, num, args);
 		i++;
 	}
 	ft_free_split(splitted);

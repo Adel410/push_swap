@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:44:03 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/11 17:56:57 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/11 22:48:24 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_check_stack(t_stack **a, t_stack **b)
 		ft_sort_three(a);
 	}
 	else if (ft_get_sizeof_stack(*a) == 4 || ft_get_sizeof_stack(*a) == 5)
-		ft_sort_stack_of_four_or_five(a, b);
+		ft_sort_small_stack(a, b);
 	else if (ft_get_sizeof_stack(*a) > 3)
 		ft_radix_sort(a, b);
 }

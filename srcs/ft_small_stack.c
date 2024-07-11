@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:49:08 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/11 17:21:07 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/11 22:47:58 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_sort_three(t_stack **a)
 		rra(a);
 }
 
-void	ft_sort_stack_of_four_or_five(t_stack **a, t_stack **b)
+void	ft_sort_small_stack(t_stack **a, t_stack **b)
 {
 	int	size;
 	int	min_pos;

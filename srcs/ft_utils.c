@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 14:29:36 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/11 17:11:49 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/11 22:50:21 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,27 +57,6 @@ void	ft_lstadd_back_stack(t_stack **lst, t_stack *new)
 	while (temp->next)
 		temp = temp->next;
 	temp->next = new;
-}
-
-t_stack	*ft_find_max(t_stack **a)
-{
-	t_stack	*temp;
-	t_stack	*biggest;
-
-	temp = *a;
-	while (temp->next)
-	{
-		if (temp->value > temp->next->value)
-		{
-			biggest = temp;
-		}
-		else
-		{
-			biggest = temp;
-		}
-		temp = temp->next;
-	}
-	return (biggest);
 }
 
 int	ft_find_min_position(t_stack *stack)
