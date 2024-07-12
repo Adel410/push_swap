@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:29:45 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 15:21:48 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 17:09:52 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void				ft_alloc_failed(t_stack *head, char **split);
 // UTILS
 
 char				*concat_args(int argc, char **argv);
-static int			calc_total_length(char **argv, int index, int acc);
 int					ft_check_duplicates(t_stack *head);
 
 // INSTRUCTIONS

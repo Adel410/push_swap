@@ -6,37 +6,11 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:29:12 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 15:22:34 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 15:30:53 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-char	*concat_args(int argc, char **argv)
-{
-	int		len;
-	char	*all_args;
-	int		index;
-
-	if (argc == 1)
-		ft_error(1);
-	if (argc == 2)
-		return (ft_strdup(argv[1]));
-	len = calc_total_length(argv, 1, 0);
-	all_args = ft_calloc(len + 1, sizeof(char));
-	if (!all_args)
-		ft_error(1);
-	all_args[0] = '\0';
-	index = 1;
-	while (argv[index] != NULL)
-	{
-		if (index > 1)
-			ft_strcat(all_args, " ");
-		ft_strcat(all_args, argv[index]);
-		index++;
-	}
-	return (all_args);
-}
 
 t_stack	*ft_args_to_stack(char *all_args, t_stack *head)
 {

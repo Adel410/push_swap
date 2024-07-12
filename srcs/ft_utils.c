@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 14:29:36 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 12:10:40 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 15:32:27 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,11 @@ int	ft_find_min_position(t_stack *stack)
 		pos++;
 	}
 	return (min_pos);
+}
+
+void	ft_alloc_failed(t_stack *head, char **split)
+{
+	ft_free_stack(&head);
+	ft_free_split(split);
+	exit(1);
 }
