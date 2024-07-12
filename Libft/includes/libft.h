@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:28:17 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/29 12:25:14 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:48:52 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 int		ft_lstsize(t_list *lst);
 
+long	ft_atol(const char *str);
+
 char	*ft_strchr(const char *str, int searched);
 
 char	*ft_strrchr(const char *str, int searched);
@@ -67,6 +69,8 @@ char	*ft_itoa(int n);
 
 char	**ft_split(char const *s, char c);
 
+char	*ft_strcat(char *dest, const char *src);
+
 void	ft_bzero(void *ptr, size_t n);
 
 void	ft_putchar_fd(char c, int fd);
@@ -86,6 +90,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+void	ft_free_split(char **split);
+
+void	ft_free_list(t_list **head);
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 

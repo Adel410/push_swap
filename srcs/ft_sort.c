@@ -1,16 +1,69 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_big_stack.c                                     :+:      :+:    :+:   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:40:18 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/11 19:42:28 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 13:01:48 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	ft_sort_three(t_stack **a)
+{
+	int	first;
+	int	second;
+	int	third;
+
+	first = (*a)->value;
+	second = (*a)->next->value;
+	third = (*a)->next->next->value;
+	if (first > second && second < third && first < third)
+		sa(a);
+	else if (first > second && second > third)
+	{
+		sa(a);
+		rra(a);
+	}
+	else if (first > second && second < third && first > third)
+		ra(a);
+	else if (first < second && second > third && first < third)
+	{
+		sa(a);
+		ra(a);
+	}
+	else if (first < second && second > third && first > third)
+		rra(a);
+}
+
+void	ft_sort_small_stack(t_stack **a, t_stack **b)
+{
+	int	size;
+	int	min_pos;
+
+	size = ft_get_sizeof_stack(*a);
+	while (size > 3)
+	{
+		min_pos = ft_find_min_position(*a);
+		while (min_pos > 0)
+		{
+			ra(a);
+			min_pos--;
+		}
+		pb(a, b);
+		size--;
+	}
+	ft_sort_three(a);
+	while (*b)
+	{
+		pa(a, b);
+		if ((*a)->value > (*a)->next->value)
+			sa(a);
+	}
+}
 
 void	ft_simplify_stack(t_stack *stack)
 {
@@ -34,11 +87,11 @@ void	ft_simplify_stack(t_stack *stack)
 	}
 }
 
-void	ft_radix_sort_stack_b(t_stack **a, t_stack **b, int b_size, int octet)
+void	ft_radix_sort_stack_b(t_stack **a, t_stack **b, int b_size, int n_bits)
 {
 	while (b_size-- && !ft_check_if_sorted(*a))
 	{
-		if ((((*b)->index >> octet) & 1) == 0)
+		if ((((*b)->index >> n_bits) & 1) == 0)
 			rb(b);
 		else
 			pa(a, b);
@@ -54,7 +107,7 @@ void	ft_radix_sort_stack_b(t_stack **a, t_stack **b, int b_size, int octet)
 
 void	ft_radix_sort(t_stack **a, t_stack **b)
 {
-	int	octet;
+	int	n_bits;
 	int	max_bits;
 	int	size;
 
@@ -63,19 +116,19 @@ void	ft_radix_sort(t_stack **a, t_stack **b)
 	size = ft_get_sizeof_stack(*a);
 	while (((size - 1) >> max_bits) != 0)
 		++max_bits;
-	octet = 0;
-	while (octet <= max_bits)
+	n_bits = 0;
+	while (n_bits <= max_bits)
 	{
 		size = ft_get_sizeof_stack(*a);
 		while (size-- && !ft_check_if_sorted(*a))
 		{
-			if ((((*a)->index >> octet) & 1) == 0)
+			if ((((*a)->index >> n_bits) & 1) == 0)
 				pb(a, b);
 			else
 				ra(a);
 		}
-		ft_radix_sort_stack_b(a, b, ft_get_sizeof_stack(*b), octet + 1);
-		octet++;
+		ft_radix_sort_stack_b(a, b, ft_get_sizeof_stack(*b), n_bits + 1);
+		n_bits++;
 	}
 	while (*b)
 		pa(a, b);

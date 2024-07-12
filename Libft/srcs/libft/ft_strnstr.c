@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:27:54 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/23 19:41:05 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:25:37 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	printf("%s", ft_strnstr("", "", 0));
-}*/

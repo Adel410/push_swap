@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:26:59 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/29 11:56:09 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:43 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	const void	*ptr;
-	printf("%s\n", (char *)ft_memchr(ptr, 458, 35));
-	printf("%s", (char *)memchr(ptr, 458, 35));
-}*/

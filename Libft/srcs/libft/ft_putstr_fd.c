@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 15:32:31 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/21 16:54:30 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:24:21 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ void	ft_putstr_fd(char *s, int fd)
 	size = ft_strlen_stat((const char *)s);
 	write(fd, &s[i], size);
 }
-/*
-int	main(int argc, char *argv[])
-{
-	int	fd = open(argv[1], O_RDWR);
-	if (argc > 0)
-	{
-		ft_putstr_fd("hello", fd);
-	}
-}*/

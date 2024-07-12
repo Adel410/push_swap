@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:55:57 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/29 14:03:58 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:25:27 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	printf("%s", ft_strtrim("baggyba", "ba"));
-}*/

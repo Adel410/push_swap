@@ -6,7 +6,7 @@
 #    By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/27 14:26:15 by ahadj-ar          #+#    #+#              #
-#    Updated: 2024/07/09 15:37:58 by ahadj-ar         ###   ########.fr        #
+#    Updated: 2024/07/12 15:19:55 by ahadj-ar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,15 @@ SRCDIR = ./srcs
 INCDIR = ./include
 LIBFTDIR = ./Libft
 LIBFT = $(LIBFTDIR)/libft.a
+
+## SOURCES
 SRC = $(wildcard $(SRCDIR)/*.c)
+
 OBJ = $(SRC:.c=.o)
 
 ################################################################################
 ### RULES
+
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)

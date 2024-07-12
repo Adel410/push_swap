@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:27:15 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/20 21:05:22 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:33 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char	dest[30] = "hello";
-	char	*txt = "             naruto";
-
-	printf("%s\n", (char *)ft_memmove(dest, txt, 30));
-	printf("%s\n", (char *)memmove(dest, txt, 30));
-}*/

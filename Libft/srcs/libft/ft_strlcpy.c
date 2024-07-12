@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:27:38 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/22 16:59:07 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:25:51 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (str_size);
 }
-/*
-int	main(void)
-{
-	char	dest[15];
-	printf("%zu", ft_strlcpy(dest, "", 15));
-	write(1, "\n", 1);
-	write(1, dest, 15);
-}*/

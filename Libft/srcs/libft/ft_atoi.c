@@ -6,12 +6,12 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:25:05 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/23 14:53:11 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:25:04 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//TEST CHECK
+
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -40,12 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-/*
-int	main(int argc, char *argv[])
-{
-	(void)argc;
-	(void)argv;
-
-	printf("%d\n", ft_atoi("\t\v\f\r\n \f-06050"));
-	printf("%d\n", atoi ("\t\v\f\r\n \f-06050"));
-}*/

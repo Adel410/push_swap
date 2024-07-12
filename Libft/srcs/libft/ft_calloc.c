@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:50:37 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/29 12:23:19 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:24:49 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (tab);
 }
-/*
-int	main(void)
-{
-	printf("%p\n", ft_calloc(0, 0));
-	printf("%p", calloc(0, 0));
-}*/

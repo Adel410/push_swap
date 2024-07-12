@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 15:27:58 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 11:25:32 by ahadj-ar         ###   ########.fr       */
+/*   Created: 2024/07/12 11:20:03 by ahadj-ar          #+#    #+#             */
+/*   Updated: 2024/07/12 11:20:15 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//TEST CHECK
-static int	ft_strlen_stat(const char *str)
+
+void	ft_free_split(char **split)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (split[i])
 	{
+		free(split[i]);
 		i++;
 	}
-	return (i);
-}
-
-char	*ft_strrchr(const char *str, int searched)
-{
-	int	i;
-
-	i = ft_strlen_stat(str);
-	while (i >= 0)
-	{
-		if (str[i] == (unsigned char)searched)
-		{
-			return ((char *)&str[i]);
-		}
-		i--;
-	}
-	return (NULL);
+	free(split);
 }

@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:27:22 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/20 15:30:54 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:30 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-int	main(void)
-{
-	char	src[5];
-	int		c;
-	size_t	n;
-
-	c = 'a';
-	n = 4;
-
-	printf("%s\n", (char *)ft_memset(src, c, n));
-	printf("%s", (char *)memset(src, c ,n));
-}*/

@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:21:12 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/29 13:58:32 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:28:53 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,6 @@ static void	ft_wr_word(char *dest, const char *src, char c)
 	dest[i] = '\0';
 }
 
-static void	ft_free_split(char **tab, int count)
-{
-	int	i;
-
-	i = 0;
-	while (i < count)
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-}
-
 static void	ft_wr_split(char **big_split, const char *str, char c)
 {
 	int	i;
@@ -82,7 +69,7 @@ static void	ft_wr_split(char **big_split, const char *str, char c)
 				j++;
 			big_split[word] = (char *)malloc(sizeof(char) * (j + 1));
 			if (big_split[word] == NULL)
-				return (ft_free_split(big_split, word));
+				return (ft_free_split(big_split));
 			ft_wr_word(big_split[word], &str[i], c);
 			i += j;
 			word++;
@@ -105,26 +92,3 @@ char	**ft_split(char const *s, char c)
 	ft_wr_split(big_split, s, c);
 	return (big_split);
 }
-
-/*int	main(void)
-{
-	char *str = "le one piece existe";
-	char c = ' ';
-	char **res = ft_split(str, c);
-	int	i;
-
-	i = 0;
-	while (res[i])
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-	i = 0;
-	while (res[i])
-	{
-		free(res[i]);
-		i++;
-	}
-	free(res);
-	return 0;
-}*/

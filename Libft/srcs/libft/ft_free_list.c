@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_free_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 15:27:58 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 11:25:32 by ahadj-ar         ###   ########.fr       */
+/*   Created: 2024/07/12 11:21:44 by ahadj-ar          #+#    #+#             */
+/*   Updated: 2024/07/12 11:24:55 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//TEST CHECK
-static int	ft_strlen_stat(const char *str)
+
+void	ft_free_list(t_list **head)
 {
-	int	i;
+	t_list	*current;
+	t_list	*next;
 
-	i = 0;
-	while (str[i])
+	current = *head;
+	while (current)
 	{
-		i++;
+		next = current->next;
+		free(current->content);
+		free(current);
+		current = next;
 	}
-	return (i);
-}
-
-char	*ft_strrchr(const char *str, int searched)
-{
-	int	i;
-
-	i = ft_strlen_stat(str);
-	while (i >= 0)
-	{
-		if (str[i] == (unsigned char)searched)
-		{
-			return ((char *)&str[i]);
-		}
-		i--;
-	}
-	return (NULL);
+	*head = NULL;
 }

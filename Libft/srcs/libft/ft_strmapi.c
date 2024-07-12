@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:48:54 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/27 17:07:53 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:25:46 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-/*int	main(void)
-{
-	char	*str = "Hello, world!";
-	char	*result = ft_strmapi(str, &test_function);
-
-	if (result)
-	{
-		printf("Resultat de ft_strmapi : %s\n", result);
-		free(result);
-	}
-	else
-	{
-		printf("Erreur : ft_strmapi a renvoyé NULL\n");
-	}
-}*/

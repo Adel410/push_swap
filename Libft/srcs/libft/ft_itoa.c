@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:35:32 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/29 14:05:17 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:51 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,3 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-/*
-int	main(void)
-{
-    char *res = ft_itoa(0);
-    printf("%s", res);
-    free(res);
-}*/

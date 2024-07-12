@@ -6,30 +6,25 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 14:29:36 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/11 22:50:21 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 12:10:40 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-char	*ft_strcat(char *dest, const char *src)
+int	ft_get_sizeof_stack(t_stack *head)
 {
-	int	dest_len;
-	int	i;
+	int		size;
+	t_stack	*temp;
 
-	dest_len = 0;
-	i = 0;
-	while (dest[dest_len] != '\0')
+	size = 0;
+	temp = head;
+	while (temp)
 	{
-		dest_len++;
+		size++;
+		temp = temp->next;
 	}
-	while (src[i] != '\0')
-	{
-		dest[dest_len + i] = src[i];
-		i++;
-	}
-	dest[dest_len + i] = '\0';
-	return (dest);
+	return (size);
 }
 
 t_stack	*ft_lstnew_int(int value)

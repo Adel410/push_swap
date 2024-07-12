@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahadj-ar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:27:06 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/19 15:36:49 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:39 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	txt[8] = "ABCDEFGH";
-	char	txt1[8] = "abcdefgh";
-
-	printf("%d\n", ft_memcmp(txt, txt1, 5));
-	printf("%d\n", memcmp(txt, txt1, 8));
-}*/

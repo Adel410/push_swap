@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:27:27 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/23 15:20:58 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:04 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,3 @@ char	*ft_strchr(const char *str, int searched)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strchr("teste", 'e'));
-	printf("%s\n", strchr("teste", 'e'));
-	printf("%s\n", ft_strchr("teste", 1024));
-	printf("%s\n", strchr("teste", 1024));
-}*/

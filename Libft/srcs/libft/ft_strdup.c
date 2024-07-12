@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:46:08 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/22 14:14:49 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:26:01 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,3 @@ char	*ft_strdup(char *src)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int		main(void)
-{
-	char	txt[6] = "abcde";
-
-	printf("%s\n", ft_strdup(txt));
-	printf("%s", strdup(txt));
-}*/

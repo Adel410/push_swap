@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:37:58 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/11 17:57:03 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 15:21:33 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,32 +30,36 @@ int	ft_check_if_sorted(t_stack *head)
 	return (1);
 }
 
-int	ft_get_sizeof_stack(t_stack *head)
+static int	calc_total_length(char **argv, int index, int acc)
 {
-	int		size;
-	t_stack	*temp;
-
-	size = 0;
-	temp = head;
-	while (temp)
-	{
-		size++;
-		temp = temp->next;
-	}
-	return (size);
+	if (argv[index] == NULL)
+		return (acc);
+	if (index > 1)
+		acc += 1;
+	acc += ft_strlen(argv[index]);
+	return (calc_total_length(argv, index + 1, acc));
 }
 
-void	ft_free_split(char **split)
+int	ft_check_duplicates(t_stack *head)
 {
-	int	i;
+	t_stack	*current;
+	t_stack	*next_node;
 
-	i = 0;
-	while (split[i])
+	current = head;
+	while (current && current->next)
 	{
-		free(split[i]);
-		i++;
+		next_node = current->next;
+		while (next_node)
+		{
+			if (current->value == next_node->value)
+			{
+				return (1);
+			}
+			next_node = next_node->next;
+		}
+		current = current->next;
 	}
-	free(split);
+	return (0);
 }
 
 void	ft_free_stack(t_stack **head)

@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 15:27:58 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 11:25:32 by ahadj-ar         ###   ########.fr       */
+/*   Created: 2024/07/12 11:47:53 by ahadj-ar          #+#    #+#             */
+/*   Updated: 2024/07/12 11:48:02 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//TEST CHECK
-static int	ft_strlen_stat(const char *str)
+
+long	ft_atol(const char *str)
 {
-	int	i;
+	long	result;
+	int		sign;
 
-	i = 0;
-	while (str[i])
+	result = 0;
+	sign = 1;
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		i++;
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	return (i);
-}
-
-char	*ft_strrchr(const char *str, int searched)
-{
-	int	i;
-
-	i = ft_strlen_stat(str);
-	while (i >= 0)
+	while (*str >= '0' && *str <= '9')
 	{
-		if (str[i] == (unsigned char)searched)
-		{
-			return ((char *)&str[i]);
-		}
-		i--;
+		result = result * 10 + (*str - '0');
+		str++;
 	}
-	return (NULL);
+	return (sign * result);
 }

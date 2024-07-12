@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:33:14 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/05/22 14:15:26 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/07/12 11:25:56 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[j] = '\0';
 	return (ptr);
 }
-/*
-int	main (void)
-{
-	printf("%s\n", ft_strjoin("one", " piece"));
-}*/
