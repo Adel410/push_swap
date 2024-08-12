@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:29:45 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 17:09:52 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/08/12 15:23:05 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void				ft_read_stack(t_stack **head);
 
 // SORTING FUNCTIONS
 
-void				ft_radix_sort(t_stack **a, t_stack **b);
+void				ft_index_sort(t_stack **a, t_stack **b);
 void				ft_sort_three(t_stack **a);
 void				ft_sort_small_stack(t_stack **a, t_stack **b);
 
@@ -60,6 +60,7 @@ int					ft_secu(int argc, char *argv[]);
 int					ft_check_args(char *args);
 void				ft_error(int i);
 void				ft_alloc_failed(t_stack *head, char **split);
+void				ft_cleanup(t_stack **a, t_stack **b, char *str);
 
 // UTILS
 

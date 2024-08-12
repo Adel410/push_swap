@@ -6,7 +6,7 @@
 #    By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/27 14:26:15 by ahadj-ar          #+#    #+#              #
-#    Updated: 2024/07/12 15:19:55 by ahadj-ar         ###   ########.fr        #
+#    Updated: 2024/08/12 17:15:25 by ahadj-ar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,15 @@ LIBFTDIR = ./Libft
 LIBFT = $(LIBFTDIR)/libft.a
 
 ## SOURCES
-SRC = $(wildcard $(SRCDIR)/*.c)
+SRC = 	./srcs/ft_check.c \
+		./srcs/ft_error.c \
+		./srcs/ft_push.c \
+		./srcs/ft_rotate.c \
+		./srcs/ft_sort.c \
+		./srcs/ft_swap.c \
+		./srcs/ft_utils.c \
+		./srcs/ft_utils2.c \
+		./srcs/main.c
 
 OBJ = $(SRC:.c=.o)
 

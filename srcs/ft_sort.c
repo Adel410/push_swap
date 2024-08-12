@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:40:18 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 13:01:48 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:08:01 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,12 @@ void	ft_sort_three(t_stack **a)
 	if (first > second && second < third && first < third)
 		sa(a);
 	else if (first > second && second > third)
-	{
-		sa(a);
-		rra(a);
-	}
-	else if (first > second && second < third && first > third)
+		(sa(a), rra(a));
+	else if (first > second && first > third)
 		ra(a);
-	else if (first < second && second > third && first < third)
-	{
-		sa(a);
-		ra(a);
-	}
-	else if (first < second && second > third && first > third)
+	else if (second > third && first < third)
+		(sa(a), ra(a));
+	else if (first < second && second > third)
 		rra(a);
 }
 
@@ -87,7 +81,7 @@ void	ft_simplify_stack(t_stack *stack)
 	}
 }
 
-void	ft_radix_sort_stack_b(t_stack **a, t_stack **b, int b_size, int n_bits)
+void	ft_index_sort_stack_b(t_stack **a, t_stack **b, int b_size, int n_bits)
 {
 	while (b_size-- && !ft_check_if_sorted(*a))
 	{
@@ -105,7 +99,7 @@ void	ft_radix_sort_stack_b(t_stack **a, t_stack **b, int b_size, int n_bits)
 	}
 }
 
-void	ft_radix_sort(t_stack **a, t_stack **b)
+void	ft_index_sort(t_stack **a, t_stack **b)
 {
 	int	n_bits;
 	int	max_bits;
@@ -127,7 +121,7 @@ void	ft_radix_sort(t_stack **a, t_stack **b)
 			else
 				ra(a);
 		}
-		ft_radix_sort_stack_b(a, b, ft_get_sizeof_stack(*b), n_bits + 1);
+		ft_index_sort_stack_b(a, b, ft_get_sizeof_stack(*b), n_bits + 1);
 		n_bits++;
 	}
 	while (*b)

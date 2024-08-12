@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:37:58 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 15:32:30 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:48:47 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,7 @@ int	ft_check_duplicates(t_stack *head)
 		while (next_node)
 		{
 			if (current->value == next_node->value)
-			{
 				return (1);
-			}
 			next_node = next_node->next;
 		}
 		current = current->next;
