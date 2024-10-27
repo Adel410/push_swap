@@ -6,14 +6,13 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:29:45 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/08/12 15:23:05 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:09:24 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../Libft/includes/libft.h"
 # include <fcntl.h>
 # include <limits.h>
 # include <stdarg.h>
@@ -62,10 +61,19 @@ void				ft_error(int i);
 void				ft_alloc_failed(t_stack *head, char **split);
 void				ft_cleanup(t_stack **a, t_stack **b, char *str);
 
-// UTILS
+// UTILS && TOOLS
 
+void				ft_putstr(char *str);
+void				ft_free_split(char **split);
+size_t				ft_strlen(const char *str);
 char				*concat_args(int argc, char **argv);
 int					ft_check_duplicates(t_stack *head);
+char				*ft_strdup(char *src);
+void				*ft_calloc(size_t nmemb, size_t size);
+char				**ft_split(char const *s, char c);
+long				ft_atol(const char *str);
+int					ft_isdigit(int c);
+char				*ft_strcat(char *dest, const char *src);
 
 // INSTRUCTIONS
 void				sa(t_stack **a);

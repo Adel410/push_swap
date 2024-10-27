@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 18:21:12 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/12 11:28:53 by ahadj-ar         ###   ########.fr       */
+/*   Created: 2024/10/27 15:00:28 by ahadj-ar          #+#    #+#             */
+/*   Updated: 2024/10/27 15:00:35 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/push_swap.h"
 
 static int	ft_count_words(const char *str, char c)
 {

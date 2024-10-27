@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:00:46 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/08/12 14:04:05 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:08:20 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sa(t_stack **a)
 	first->next = second->next;
 	second->next = first;
 	*a = second;
-	ft_printf("sa\n");
+	ft_putstr("sa\n");
 }
 
 void	sb(t_stack **b)
@@ -39,7 +39,7 @@ void	sb(t_stack **b)
 	first->next = second->next;
 	second->next = first;
 	*b = second;
-	ft_printf("sb\n");
+	ft_putstr("sb\n");
 }
 
 void	ss(t_stack **a, t_stack **b)
@@ -61,6 +61,6 @@ void	ss(t_stack **a, t_stack **b)
 		first_b->next = second_b->next;
 		second_b->next = first_b;
 		*b = second_b;
-		ft_printf("ss\n");
+		ft_putstr("ss\n");
 	}
 }

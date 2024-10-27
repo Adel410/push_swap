@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:29:12 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/08/12 17:12:53 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:08:25 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,18 @@ int	ft_is_valid_number(char *str, char **args, t_stack *head)
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	if (!str[i])
-		return (0);
+	if (str[i] == '\0')
+	{
+		ft_putstr("Error\n");
+		ft_free_node(head);
+		ft_free_split(args);
+		return (-1);
+	}
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
 		{
-			ft_printf("Invalid arguments\n");
+			ft_putstr("Error\n");
 			ft_free_node(head);
 			ft_free_split(args);
 			return (-1);
@@ -51,7 +56,7 @@ int	ft_check_overflow(long value, char **args, t_stack *head)
 {
 	if (value > INT_MAX || value < INT_MIN)
 	{
-		ft_printf("Overflow\n");
+		ft_putstr("Error\n");
 		ft_free_node(head);
 		ft_free_split(args);
 		return (-1);
@@ -98,7 +103,8 @@ int	main(int argc, char *argv[])
 	b = (t_stack **)malloc(sizeof(t_stack));
 	*a = NULL;
 	*b = NULL;
-	ft_secu(argc, argv);
+	if (ft_secu(argc, argv) == 1)
+		ft_cleanup(a, b, "");
 	all_args = concat_args(argc, argv);
 	if (!all_args)
 		ft_error(1);
@@ -107,7 +113,7 @@ int	main(int argc, char *argv[])
 	if (*a == NULL || a == NULL)
 		ft_cleanup(a, b, "");
 	if (ft_check_duplicates(*a) == 1)
-		ft_cleanup(a, b, "There is duplicates\n");
+		ft_cleanup(a, b, "Error\n");
 	ft_check_stack(a, b);
 	ft_cleanup(a, b, "");
 }

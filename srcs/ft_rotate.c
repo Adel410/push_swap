@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:04:36 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/10 16:41:46 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:08:15 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ra(t_stack **a)
 		first->next = NULL;
 		last->next = first;
 	}
-	ft_printf("ra\n");
+	ft_putstr("ra\n");
 }
 
 void	rb(t_stack **b)
@@ -44,7 +44,7 @@ void	rb(t_stack **b)
 	*b = first->next;
 	first->next = NULL;
 	temp->next = first;
-	ft_printf("rb\n");
+	ft_putstr("rb\n");
 }
 
 void	rr(t_stack **a, t_stack **b)
@@ -71,7 +71,7 @@ void	rr(t_stack **a, t_stack **b)
 		b_last->next = b_first;
 		b_first->next = NULL;
 	}
-	ft_printf("rr\n");
+	ft_putstr("rr\n");
 }
 
 void	rra(t_stack **a)
@@ -93,7 +93,7 @@ void	rra(t_stack **a)
 		last->next = *a;
 		*a = last;
 	}
-	ft_printf("rra\n");
+	ft_putstr("rra\n");
 }
 
 void	rrb(t_stack **b)
@@ -115,5 +115,5 @@ void	rrb(t_stack **b)
 		last->next = *b;
 		*b = last;
 	}
-	ft_printf("rrb\n");
+	ft_putstr("rrb\n");
 }

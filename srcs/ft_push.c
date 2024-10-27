@@ -6,7 +6,7 @@
 /*   By: ahadj-ar <ahadj-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:03:22 by ahadj-ar          #+#    #+#             */
-/*   Updated: 2024/07/10 16:47:15 by ahadj-ar         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:08:05 by ahadj-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	pa(t_stack **a, t_stack **b)
 		temp->next = *a;
 		*a = temp;
 	}
-	ft_printf("pa\n");
+	ft_putstr("pa\n");
 }
 
 void	pb(t_stack **a, t_stack **b)
@@ -37,7 +37,7 @@ void	pb(t_stack **a, t_stack **b)
 		temp->next = *b;
 		*b = temp;
 	}
-	ft_printf("pb\n");
+	ft_putstr("pb\n");
 }
 
 void	rotate_stack(t_stack **s)
@@ -64,5 +64,5 @@ void	rrr(t_stack **a, t_stack **b)
 {
 	rotate_stack(a);
 	rotate_stack(b);
-	ft_printf("rrr\n");
+	ft_putstr("rrr\n");
 }
